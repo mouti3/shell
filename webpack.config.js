@@ -9,7 +9,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:5000/",
+    // publicPath: "http://localhost:5000/",
     uniqueName: "shell"
   },
   optimization: {
@@ -25,9 +25,9 @@ module.exports = {
         //     './Component': './/src/app/app.component.ts',
         // },
 
-        remotes: {
-            "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
-        },
+        // remotes: {
+        //     "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
+        // },
 
         shared: {
           "@angular/core": { singleton: true, strictVersion: true },

@@ -10,7 +10,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'flights',
+    path: 'mouti',
      loadChildren: () =>
    loadRemoteModule({
    remoteName: 'mfe1',
@@ -18,10 +18,19 @@ const routes: Routes = [
  })
  .then(m => m.AppModule)
   },
+  {
+    path: 'abeda',
+    loadChildren: () =>
+      loadRemoteModule({
+        remoteName: 'mfe2',
+        exposedModule: './Module'
+      })
+        .then(m => m.AppModule)
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
